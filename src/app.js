@@ -14,36 +14,6 @@ import 'react-dates/initialize';
 
 const store = configureStore();
 
-store.subscribe(() =>{
-    
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-    console.log(visibleExpenses)
-
-});
-
-
-store.dispatch(addExpense({ 
-    description : 'rent',
-    amount : 109500,
-    createdAt : 0
-}));
-
-store.dispatch(addExpense({ 
-    description : 'code react',
-    amount : 1000,
-    createdAt: 2
-}));
-
-store.dispatch(addExpense({ 
-    description : 'finishing coding react',
-    amount : 2000
-}));
-
-
-// store.dispatch(setTextFilter('coding'));
-
-
 const appRoot = document.getElementById('app');
 const jsx = (
     <Provider store={store}>
