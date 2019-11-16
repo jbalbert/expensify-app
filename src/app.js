@@ -11,6 +11,8 @@ import 'react-dates/initialize';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
+
+
 const store = configureStore();
 
 const appRoot = document.getElementById('app');
